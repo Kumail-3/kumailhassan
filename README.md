@@ -1,4 +1,4 @@
-# kumailhassan
+# Kumail Hassan
 Data Analyst | AI & SupplyChain Analytics Enthusiast | SQL, Python, Power BI, Azure
 
 # Hi there, I'm Kumail Hassan 👋
