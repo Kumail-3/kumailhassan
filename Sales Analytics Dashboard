@@ -1,4 +1,5 @@
 # Sales Analytics Dashboard
+***Generate a dataset based on the random numbers****
 import pandas as pd
 import numpy as np
 
@@ -30,3 +31,7 @@ df = pd.DataFrame({
 
 df.to_csv('car_rental_data.csv', index=False)
 print('Dataset created successfully.')
+
+
+
+
