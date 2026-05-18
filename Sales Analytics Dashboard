@@ -1,1 +1,32 @@
 # Sales Analytics Dashboard
+import pandas as pd
+import numpy as np
+
+np.random.seed(42)
+dates = pd.date_range('2025-01-01', periods=180)
+
+bookings = np.random.randint(15, 60, size=len(dates))
+vehicles_available = np.random.randint(50, 80, size=len(dates))
+vehicles_rented = np.minimum(bookings, vehicles_available)
+revenue = bookings * np.random.randint(70, 130, size=len(dates))
+upgrades_sold = np.random.randint(0, 15, size=len(dates))
+add_on_revenue = upgrades_sold * np.random.randint(20, 80, size=len(dates))
+nps = np.random.randint(60, 100, size=len(dates))
+staff = np.random.randint(3, 8, size=len(dates))
+damage_reports = np.random.randint(0, 4, size=len(dates))
+
+df = pd.DataFrame({
+    'Date': dates,
+    'Bookings': bookings,
+    'Revenue': revenue,
+    'Vehicles_Available': vehicles_available,
+    'Vehicles_Rented': vehicles_rented,
+    'Upgrades_Sold': upgrades_sold,
+    'Add_On_Revenue': add_on_revenue,
+    'NPS_Score': nps,
+    'Staff_On_Duty': staff,
+    'Damage_Reports': damage_reports
+})
+
+df.to_csv('car_rental_data.csv', index=False)
+print('Dataset created successfully.')
